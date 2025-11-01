@@ -1,0 +1,1941 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="JBT-RAMOS - 突破极限的超级PE系统！光速启动，内存狂飙，免费登上太阳！">
+    <title>JBT-RAMOS - 登上太阳的终极PE系统 | 技术革命</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Matrix背景 -->
+    <canvas id="matrix-canvas"></canvas>
+    
+    <!-- 粒子背景 -->
+    <div id="particles-js"></div>
+    
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <span class="logo">⚡ JBT-RAMOS</span>
+                <span class="version-badge">v2.1.7-Gen2</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">首页</a></li>
+                <li><a href="#tech">技术详解</a></li>
+                <li><a href="#benchmark">性能测试</a></li>
+                <li><a href="#features">超能力</a></li>
+                <li><a href="#architecture">系统架构</a></li>
+                <li><a href="#code">代码展示</a></li>
+                <li><a href="#sun-journey">登陆太阳</a></li>
+                <li><a href="#versions">版本历史</a></li>
+                <li><a href="#download">下载</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ASCII艺术标题 -->
+    <section class="ascii-hero">
+        <div class="container">
+            <pre class="ascii-art">
+     ██╗██████╗ ████████╗      ██████╗  █████╗ ███╗   ███╗ ██████╗ ███████╗
+     ██║██╔══██╗╚══██╔══╝      ██╔══██╗██╔══██╗████╗ ████║██╔═══██╗██╔════╝
+     ██║██████╔╝   ██║   █████╗██████╔╝███████║██╔████╔██║██║   ██║███████╗
+██   ██║██╔══██╗   ██║   ╚════╝██╔══██╗██╔══██║██║╚██╔╝██║██║   ██║╚════██║
+╚█████╔╝██████╔╝   ██║         ██║  ██║██║  ██║██║ ╚═╝ ██║╚██████╔╝███████║
+ ╚════╝ ╚═════╝    ╚═╝         ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝ ╚═════╝ ╚══════╝
+                                                                              
+            ███████╗██╗   ██╗██████╗ ███████╗██████╗     ██████╗ ███████╗
+            ██╔════╝██║   ██║██╔══██╗██╔════╝██╔══██╗    ██╔══██╗██╔════╝
+            ███████╗██║   ██║██████╔╝█████╗  ██████╔╝    ██████╔╝█████╗  
+            ╚════██║██║   ██║██╔═══╝ ██╔══╝  ██╔══██╗    ██╔═══╝ ██╔══╝  
+            ███████║╚██████╔╝██║     ███████╗██║  ██║    ██║     ███████╗
+            ╚══════╝ ╚═════╝ ╚═╝     ╚══════╝╚═╝  ╚═╝    ╚═╝     ╚══════╝
+            </pre>
+            <div class="terminal-box">
+                <div class="terminal-header">
+                    <span class="terminal-button red"></span>
+                    <span class="terminal-button yellow"></span>
+                    <span class="terminal-button green"></span>
+                    <span class="terminal-title">JBT-RAMOS Terminal v2.1.7</span>
+                </div>
+                <div class="terminal-body">
+                    <p><span class="prompt">root@jbt-ramos:~#</span> <span class="command">systemctl status jbt-ramos</span></p>
+                    <p><span class="output">● jbt-ramos.service - JBT-RAMOS Ultra Fast PE System</span></p>
+                    <p><span class="output">   Loaded: loaded (/etc/systemd/system/jbt-ramos.service; enabled)</span></p>
+                    <p><span class="output">   Active: <span class="status-active">active (running)</span> since Sun 2025-11-01 14:00:00 UTC; ∞</span></p>
+                    <p><span class="output">   Status: "Ready to fly to the SUN ☀️"</span></p>
+                    <p><span class="output">   Memory: 1.9GB / 8.0GB (23.75%)</span></p>
+                    <p><span class="output">   Speed: <span class="status-active">LUDICROUS MODE ACTIVATED</span></span></p>
+                    <p><span class="prompt">root@jbt-ramos:~#</span> <span class="command typed-text"></span><span class="cursor">█</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 英雄区域 -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="glitch" data-text="JBT-RAMOS">JBT-RAMOS</h1>
+                <p class="hero-subtitle">🔥 不是PE系统，是登上太阳的超级火箭！</p>
+                <h2 class="hero-tagline">
+                    <span class="highlight">光速启动</span> × 
+                    <span class="highlight">内存狂飙</span> × 
+                    <span class="highlight">技术爆表</span> × 
+                    <span class="highlight">永久免费</span>
+                </h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">⚡</div>
+                        <div class="stat-value" data-value="10000">0</div>
+                        <div class="stat-unit">倍</div>
+                        <div class="stat-label">速度提升</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">💾</div>
+                        <div class="stat-value" data-value="953">0</div>
+                        <div class="stat-unit">MB</div>
+                        <div class="stat-label">ISO体积</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🚀</div>
+                        <div class="stat-value" data-value="1.9">0</div>
+                        <div class="stat-unit">GB</div>
+                        <div class="stat-label">内存占用</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🆓</div>
+                        <div class="stat-value" data-value="0">0</div>
+                        <div class="stat-unit">¥</div>
+                        <div class="stat-label">永久免费</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">⏱️</div>
+                        <div class="stat-value" data-value="3">0</div>
+                        <div class="stat-unit">秒</div>
+                        <div class="stat-label">启动时间</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🛡️</div>
+                        <div class="stat-value" data-value="100">0</div>
+                        <div class="stat-unit">%</div>
+                        <div class="stat-label">病毒防护</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">👥</div>
+                        <div class="stat-value" data-value="50000">0</div>
+                        <div class="stat-unit">+</div>
+                        <div class="stat-label">用户数量</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">⭐</div>
+                        <div class="stat-value" data-value="99.9">0</div>
+                        <div class="stat-unit">%</div>
+                        <div class="stat-label">满意度</div>
+                    </div>
+                </div>
+                <div class="hero-buttons">
+                    <a href="#download" class="btn btn-primary pulse">
+                        🚀 立即起飞（完全免费）
+                    </a>
+                    <a href="#tech" class="btn btn-secondary">
+                        💡 深入技术详解
+                    </a>
+                    <a href="#sun-journey" class="btn btn-accent">
+                        ☀️ 查看登陆太阳实录
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 汇编代码展示 -->
+    <section id="code" class="assembly-section">
+        <div class="container">
+            <h2 class="section-title">
+                💻 底层汇编代码展示
+                <span class="subtitle">这就是JBT-RAMOS的核心秘密！</span>
+            </h2>
+            <div class="code-showcase">
+                <div class="code-panel">
+                    <div class="code-header">
+                        <span class="code-lang">x86-64 Assembly</span>
+                        <span class="code-file">jbt_ramos_boot.asm</span>
+                    </div>
+                    <pre class="code-content"><code>; JBT-RAMOS Ultra-Fast Boot Loader
+; Copyright (C) 2024-2025 JBT
+; 这段代码让JBT-RAMOS启动速度达到光速级别！
+
+section .text
+    global _start
+    
+_start:
+    ; 初始化CPU为最高性能模式
+    mov rax, 0x199          ; IA32_PERF_CTL MSR
+    mov rcx, 0xFFFFFFFF     ; 设置为最大性能
+    wrmsr                    ; 写入MSR寄存器
+    
+    ; 启用所有CPU核心
+    mov rax, 0x1B           ; APIC_BASE MSR
+    rdmsr
+    or eax, 0x800           ; 启用APIC
+    wrmsr
+    
+    ; 加载RAMDISK到内存
+load_ramdisk:
+    mov rsi, ramdisk_start  ; 源地址
+    mov rdi, 0x100000       ; 目标地址（1MB处）
+    mov rcx, ramdisk_size   ; 大小
+    rep movsb               ; 快速内存复制
+    
+    ; 设置内存保护
+    mov rax, cr0
+    or eax, 0x80000000      ; 启用分页
+    mov cr0, rax
+    
+    ; 初始化SSE/AVX指令集
+    mov rax, cr4
+    or eax, 0x600           ; OSFXSR | OSXMMEXCPT
+    mov cr4, rax
+    
+    ; 跳转到内核入口点
+    jmp kernel_entry
+    
+kernel_entry:
+    ; 欢迎来到JBT-RAMOS！
+    mov rax, 0xB8000        ; 显存地址
+    mov byte [rax], 'J'
+    mov byte [rax+1], 0x0A  ; 绿色
+    mov byte [rax+2], 'B'
+    mov byte [rax+3], 0x0A
+    mov byte [rax+4], 'T'
+    mov byte [rax+5], 0x0A
+    
+    ; 无限循环（系统运行中）
+    jmp $
+
+section .data
+    ramdisk_start: db "JBT-RAMOS-RAMDISK", 0
+    ramdisk_size: equ $ - ramdisk_start
+    welcome_msg: db "Welcome to JBT-RAMOS - The Fastest PE System!", 0
+                </code></pre>
+                </div>
+
+                <div class="code-panel">
+                    <div class="code-header">
+                        <span class="code-lang">NASM x86 Assembly</span>
+                        <span class="code-file">memory_optimize.asm</span>
+                    </div>
+                    <pre class="code-content"><code>; JBT-RAMOS内存优化引擎
+; 这段代码让1.9GB内存占用成为可能！
+
+section .text
+    global optimize_memory
+    
+optimize_memory:
+    push rbp
+    mov rbp, rsp
+    
+    ; 压缩内存页
+    mov rax, [memory_pages]
+    mov rcx, page_count
+    
+compress_loop:
+    ; 使用LZ4算法压缩
+    mov rsi, [rax]
+    call lz4_compress
+    
+    ; 释放未使用的页面
+    mov rdi, [rax]
+    call free_page
+    
+    add rax, 8
+    loop compress_loop
+    
+    ; 整理内存碎片
+    call defragment_memory
+    
+    ; 启用内存去重
+    mov rax, cr4
+    or eax, 0x20000         ; 启用内存去重
+    mov cr4, rax
+    
+    pop rbp
+    ret
+
+lz4_compress:
+    ; LZ4压缩实现
+    ; 输入: RSI = 源数据地址
+    ; 输出: RAX = 压缩后大小
+    
+    xor rax, rax
+    mov rcx, block_size
+    
+compress_block:
+    ; 查找重复模式
+    mov rdx, [rsi]
+    cmp rdx, [rsi+4]
+    je found_match
+    
+    inc rsi
+    loop compress_block
+    ret
+    
+found_match:
+    ; 记录匹配位置
+    ; ... 压缩逻辑 ...
+    ret
+
+defragment_memory:
+    ; 内存碎片整理
+    mov rsi, heap_start
+    mov rdi, heap_start
+    mov rcx, heap_size
+    
+defrag_loop:
+    ; 移动有效内存块
+    cmp byte [rsi], 0
+    je skip_block
+    
+    movsb
+    
+skip_block:
+    inc rsi
+    loop defrag_loop
+    ret
+
+section .data
+    memory_pages: dq 0
+    page_count: equ 4096
+    block_size: equ 65536
+    heap_start: dq 0x200000
+    heap_size: equ 0x800000
+                </code></pre>
+                </div>
+
+                <div class="code-panel">
+                    <div class="code-header">
+                        <span class="code-lang">Intel x86-64 ASM</span>
+                        <span class="code-file">ultra_fast_io.asm</span>
+                    </div>
+                    <pre class="code-content"><code>; JBT-RAMOS超速I/O引擎
+; 这就是为什么JBT-RAMOS比SSD还快的秘密！
+
+section .text
+    global turbo_io_init
+    
+turbo_io_init:
+    ; 禁用所有I/O延迟
+    cli                     ; 关中断
+    
+    ; 直接内存访问优化
+    mov dx, 0x3F6          ; IDE控制端口
+    mov al, 0x00           ; 无等待模式
+    out dx, al
+    
+    ; 启用DMA传输
+    mov dx, 0x4            ; DMA通道2
+    mov al, 0xC0           ; 级联模式
+    out dx, al
+    
+    ; 设置突发传输模式
+    mov eax, 0x80000000    ; PCI配置空间
+    mov dx, 0xCF8
+    out dx, eax
+    
+    mov dx, 0xCFC
+    mov eax, 0xFFFFFFFF    ; 最大突发长度
+    out dx, eax
+    
+    ; 启用预读缓存
+    mov rax, cr0
+    or eax, 0x40000000     ; 启用缓存
+    and eax, ~0x20000000   ; 禁用缓存禁用位
+    mov cr0, rax
+    
+    ; 优化缓存行为
+    invd                   ; 无效化缓存
+    wbinvd                 ; 写回并无效化
+    
+    ; 启用超线程
+    mov ecx, 0x1A0
+    rdmsr
+    or eax, 0x1
+    wrmsr
+    
+    sti                    ; 开中断
+    ret
+
+; 零拷贝数据传输
+zero_copy_transfer:
+    ; 源地址：RSI
+    ; 目标地址：RDI  
+    ; 大小：RCX
+    
+    ; 使用AVX2指令集进行256位传输
+    vmovdqa ymm0, [rsi]
+    vmovdqa [rdi], ymm0
+    
+    add rsi, 32
+    add rdi, 32
+    sub rcx, 32
+    jnz zero_copy_transfer
+    
+    ret
+
+; 内存映射I/O
+mmap_io:
+    mov rax, 9              ; sys_mmap
+    mov rdi, 0              ; 内核选择地址
+    mov rsi, file_size      ; 文件大小
+    mov rdx, 3              ; PROT_READ|PROT_WRITE
+    mov r10, 1              ; MAP_SHARED
+    mov r8, file_descriptor
+    mov r9, 0               ; 偏移量
+    syscall
+    ret
+
+section .data
+    file_size: dq 0
+    file_descriptor: dq 0
+                </code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 技术规格详解 -->
+    <section id="tech" class="tech-specs">
+        <div class="container">
+            <h2 class="section-title">
+                🔬 技术规格深度解析
+                <span class="subtitle">每一个数字都是突破极限的证明！</span>
+            </h2>
+
+            <div class="specs-grid">
+                <div class="spec-category">
+                    <h3>⚙️ 系统核心参数</h3>
+                    <table class="spec-table">
+                        <tr>
+                            <td>内核版本</td>
+                            <td><code>Windows 11 Build 22635.2419</code></td>
+                        </tr>
+                        <tr>
+                            <td>架构</td>
+                            <td><code>x86-64 (AMD64/Intel 64)</code></td>
+                        </tr>
+                        <tr>
+                            <td>引导模式</td>
+                            <td><code>UEFI + Legacy BIOS (双模式支持)</code></td>
+                        </tr>
+                        <tr>
+                            <td>文件系统</td>
+                            <td><code>NTFS 3.1 + exFAT + FAT32</code></td>
+                        </tr>
+                        <tr>
+                            <td>压缩算法</td>
+                            <td><code>LZ4 + LZMA2 (双层压缩)</code></td>
+                        </tr>
+                        <tr>
+                            <td>启动方式</td>
+                            <td><code>Full RAM Disk (完全内存启动)</code></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="spec-category">
+                    <h3>💾 内存管理</h3>
+                    <table class="spec-table">
+                        <tr>
+                            <td>最小内存需求</td>
+                            <td><code>2GB (推荐4GB+)</code></td>
+                        </tr>
+                        <tr>
+                            <td>运行时内存占用</td>
+                            <td><code>1.9GB (精简优化后)</code></td>
+                        </tr>
+                        <tr>
+                            <td>内存压缩率</td>
+                            <td><code>3.2:1 (实时压缩)</code></td>
+                        </tr>
+                        <tr>
+                            <td>页面大小</td>
+                            <td><code>4KB (标准) / 2MB (大页)</code></td>
+                        </tr>
+                        <tr>
+                            <td>缓存策略</td>
+                            <td><code>Write-Back + Prefetch</code></td>
+                        </tr>
+                        <tr>
+                            <td>内存去重</td>
+                            <td><code>启用 (节省30%内存)</code></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="spec-category">
+                    <h3>⚡ 性能指标</h3>
+                    <table class="spec-table">
+                        <tr>
+                            <td>冷启动时间</td>
+                            <td><code>3-5秒 (vs 普通PE 30秒+)</code></td>
+                        </tr>
+                        <tr>
+                            <td>热启动时间</td>
+                            <td><code>1-2秒 (光速级别)</code></td>
+                        </tr>
+                        <tr>
+                            <td>内存读取速度</td>
+                            <td><code>50GB/s+ (DDR4-3200)</code></td>
+                        </tr>
+                        <tr>
+                            <td>文件打开速度</td>
+                            <td><code><1ms (vs HDD 10-20ms)</code></td>
+                        </tr>
+                        <tr>
+                            <td>程序启动速度</td>
+                            <td><code>5-10倍提升</code></td>
+                        </tr>
+                        <tr>
+                            <td>系统响应延迟</td>
+                            <td><code><5ms (接近实时)</code></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="spec-category">
+                    <h3>🛠️ 内置工具</h3>
+                    <table class="spec-table">
+                        <tr>
+                            <td>画图工具</td>
+                            <td><code>Win10 原版 (功能完整)</code></td>
+                        </tr>
+                        <tr>
+                            <td>截图工具</td>
+                            <td><code>Snipping Tool (Win10版)</code></td>
+                        </tr>
+                        <tr>
+                            <td>计算器</td>
+                            <td><code>Win10 Calculator (科学计算)</code></td>
+                        </tr>
+                        <tr>
+                            <td>PowerShell</td>
+                            <td><code>v5.1 (完整功能)</code></td>
+                        </tr>
+                        <tr>
+                            <td>.NET Framework</td>
+                            <td><code>精简版 (支持大部分应用)</code></td>
+                        </tr>
+                        <tr>
+                            <td>Windows Media Player</td>
+                            <td><code>已修复 (完美播放)</code></td>
+                        </tr>
+                        <tr>
+                            <td>7-Zip</td>
+                            <td><code>集成 (优化注册表)</code></td>
+                        </tr>
+                        <tr>
+                            <td>DiskGenius</td>
+                            <td><code>专业版 (分区管理)</code></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="spec-category">
+                    <h3>🔧 硬件支持</h3>
+                    <table class="spec-table">
+                        <tr>
+                            <td>CPU支持</td>
+                            <td><code>Intel Core 2+ / AMD Athlon 64+</code></td>
+                        </tr>
+                        <tr>
+                            <td>触屏支持</td>
+                            <td><code>✅ 完美支持 (测试过Surface Pro 1)</code></td>
+                        </tr>
+                        <tr>
+                            <td>网卡驱动</td>
+                            <td><code>集成99%主流网卡驱动</code></td>
+                        </tr>
+                        <tr>
+                            <td>显卡支持</td>
+                            <td><code>NVIDIA/AMD/Intel集显全支持</code></td>
+                        </tr>
+                        <tr>
+                            <td>USB设备</td>
+                            <td><code>USB 2.0/3.0/3.1/3.2全支持</code></td>
+                        </tr>
+                        <tr>
+                            <td>NVMe SSD</td>
+                            <td><code>原生支持 (无需额外驱动)</code></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="spec-category">
+                    <h3>🔒 安全特性</h3>
+                    <table class="spec-table">
+                        <tr>
+                            <td>病毒防护</td>
+                            <td><code>重启还原 (100%防护)</code></td>
+                        </tr>
+                        <tr>
+                            <td>数据安全</td>
+                            <td><code>只读模式 (无法篡改)</code></td>
+                        </tr>
+                        <tr>
+                            <td>网络防火墙</td>
+                            <td><code>Windows Defender内置</code></td>
+                        </tr>
+                        <tr>
+                            <td>隐私保护</td>
+                            <td><code>无追踪 / 无遥测</code></td>
+                        </tr>
+                        <tr>
+                            <td>安全启动</td>
+                            <td><code>支持Secure Boot</code></td>
+                        </tr>
+                        <tr>
+                            <td>BitLocker</td>
+                            <td><code>支持解锁 (系统维护必备)</code></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 性能基准测试 -->
+    <section id="benchmark" class="benchmark-section">
+        <div class="container">
+            <h2 class="section-title">
+                📊 性能基准测试 - 用数据说话！
+                <span class="subtitle">真实测试数据，吊打所有竞品！</span>
+            </h2>
+
+            <div class="benchmark-grid">
+                <!-- 启动速度对比 -->
+                <div class="benchmark-card">
+                    <h3>🚀 启动速度对比</h3>
+                    <canvas id="boot-chart"></canvas>
+                    <div class="benchmark-data">
+                        <div class="data-row winner">
+                            <span class="product">JBT-RAMOS</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 10%; background: var(--gradient-1)"></div>
+                            </div>
+                            <span class="value">3秒</span>
+                        </div>
+                        <div class="data-row">
+                            <span class="product">微PE工具箱</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 50%"></div>
+                            </div>
+                            <span class="value">15秒</span>
+                        </div>
+                        <div class="data-row">
+                            <span class="product">大白菜PE</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 70%"></div>
+                            </div>
+                            <span class="value">25秒</span>
+                        </div>
+                        <div class="data-row">
+                            <span class="product">老毛桃PE</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 100%"></div>
+                            </div>
+                            <span class="value">35秒</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 内存占用对比 -->
+                <div class="benchmark-card">
+                    <h3>💾 内存占用对比</h3>
+                    <canvas id="memory-chart"></canvas>
+                    <div class="benchmark-data">
+                        <div class="data-row winner">
+                            <span class="product">JBT-RAMOS</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 40%; background: var(--gradient-1)"></div>
+                            </div>
+                            <span class="value">1.9GB</span>
+                        </div>
+                        <div class="data-row">
+                            <span class="product">微PE工具箱</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 60%"></div>
+                            </div>
+                            <span class="value">3.2GB</span>
+                        </div>
+                        <div class="data-row">
+                            <span class="product">大白菜PE</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 85%"></div>
+                            </div>
+                            <span class="value">4.5GB</span>
+                        </div>
+                        <div class="data-row">
+                            <span class="product">Windows WinPE</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 100%"></div>
+                            </div>
+                            <span class="value">5.8GB</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- I/O性能测试 -->
+                <div class="benchmark-card">
+                    <h3>⚡ I/O读写速度</h3>
+                    <div class="benchmark-stats">
+                        <div class="stat-item">
+                            <div class="stat-label">顺序读取</div>
+                            <div class="stat-bar">
+                                <div class="stat-fill" style="width: 100%; background: var(--gradient-1)"></div>
+                            </div>
+                            <div class="stat-value">50,000 MB/s</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-label">顺序写入</div>
+                            <div class="stat-bar">
+                                <div class="stat-fill" style="width: 95%; background: var(--gradient-1)"></div>
+                            </div>
+                            <div class="stat-value">48,000 MB/s</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-label">随机读取4K</div>
+                            <div class="stat-bar">
+                                <div class="stat-fill" style="width: 90%; background: var(--gradient-1)"></div>
+                            </div>
+                            <div class="stat-value">800,000 IOPS</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-label">随机写入4K</div>
+                            <div class="stat-bar">
+                                <div class="stat-fill" style="width: 85%; background: var(--gradient-1)"></div>
+                            </div>
+                            <div class="stat-value">750,000 IOPS</div>
+                        </div>
+                    </div>
+                    <p class="benchmark-note">
+                        ⚠️ 测试环境：DDR4-3200 16GB，完全内存运行<br>
+                        对比：顶级NVMe SSD约7000MB/s，JBT-RAMOS快7倍！
+                    </p>
+                </div>
+
+                <!-- CPU使用率 -->
+                <div class="benchmark-card">
+                    <h3>🖥️ CPU占用率</h3>
+                    <div class="cpu-usage">
+                        <div class="cpu-meter">
+                            <svg viewBox="0 0 200 200" class="cpu-circle">
+                                <circle cx="100" cy="100" r="90" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="20"/>
+                                <circle cx="100" cy="100" r="90" fill="none" stroke="url(#gradient)" stroke-width="20" 
+                                        stroke-dasharray="565" stroke-dashoffset="480" stroke-linecap="round"/>
+                            </svg>
+                            <div class="cpu-value">15%</div>
+                        </div>
+                        <p class="cpu-description">
+                            空闲时CPU占用仅15%，其他PE普遍30-50%！<br>
+                            <strong>优化到极致的系统效率！</strong>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 响应延迟测试 -->
+                <div class="benchmark-card">
+                    <h3>⏱️ 系统响应延迟</h3>
+                    <div class="latency-test">
+                        <div class="latency-bar">
+                            <div class="latency-marker" style="left: 5%">
+                                <div class="marker-dot green"></div>
+                                <div class="marker-label">JBT-RAMOS<br>4ms</div>
+                            </div>
+                            <div class="latency-marker" style="left: 30%">
+                                <div class="marker-dot yellow"></div>
+                                <div class="marker-label">微PE<br>18ms</div>
+                            </div>
+                            <div class="latency-marker" style="left: 60%">
+                                <div class="marker-dot orange"></div>
+                                <div class="marker-label">大白菜<br>35ms</div>
+                            </div>
+                            <div class="latency-marker" style="left: 90%">
+                                <div class="marker-dot red"></div>
+                                <div class="marker-label">普通系统<br>80ms</div>
+                            </div>
+                        </div>
+                        <div class="latency-scale">
+                            <span>0ms</span>
+                            <span>50ms</span>
+                            <span>100ms</span>
+                        </div>
+                    </div>
+                    <p class="benchmark-note">
+                        测试项目：点击程序到窗口出现的时间<br>
+                        <strong>JBT-RAMOS：接近实时响应！</strong>
+                    </p>
+                </div>
+
+                <!-- 稳定性测试 -->
+                <div class="benchmark-card">
+                    <h3>🛡️ 稳定性测试</h3>
+                    <div class="stability-stats">
+                        <div class="stability-item">
+                            <div class="stability-icon">✅</div>
+                            <div class="stability-label">72小时压力测试</div>
+                            <div class="stability-value">0次崩溃</div>
+                        </div>
+                        <div class="stability-item">
+                            <div class="stability-icon">✅</div>
+                            <div class="stability-label">内存泄漏测试</div>
+                            <div class="stability-value">未检测到</div>
+                        </div>
+                        <div class="stability-item">
+                            <div class="stability-icon">✅</div>
+                            <div class="stability-label">蓝屏死机</div>
+                            <div class="stability-value">0次BSOD</div>
+                        </div>
+                        <div class="stability-item">
+                            <div class="stability-icon">✅</div>
+                            <div class="stability-label">数据完整性</div>
+                            <div class="stability-value">100%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 实际跑分 -->
+            <div class="benchmark-scores">
+                <h3>🏆 综合性能跑分</h3>
+                <div class="scores-grid">
+                    <div class="score-card">
+                        <div class="score-title">CrystalDiskMark</div>
+                        <div class="score-value">∞</div>
+                        <div class="score-subtitle">内存速度无上限</div>
+                    </div>
+                    <div class="score-card">
+                        <div class="score-title">AS SSD Benchmark</div>
+                        <div class="score-value">9999+</div>
+                        <div class="score-subtitle">爆表级别</div>
+                    </div>
+                    <div class="score-card">
+                        <div class="score-title">PCMark 10</div>
+                        <div class="score-value">8500</div>
+                        <div class="score-subtitle">旗舰级性能</div>
+                    </div>
+                    <div class="score-card">
+                        <div class="score-title">UserBenchmark</div>
+                        <div class="score-value">250%</div>
+                        <div class="score-subtitle">超越常规系统</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 系统架构图 -->
+    <section id="architecture" class="architecture-section">
+        <div class="container">
+            <h2 class="section-title">
+                🏗️ JBT-RAMOS系统架构
+                <span class="subtitle">看懂这张图，你就理解为什么它这么快！</span>
+            </h2>
+
+            <div class="architecture-diagram">
+                <pre class="arch-ascii">
+┌─────────────────────────────────────────────────────────────────────────┐
+│                          用户层 (User Space)                            │
+│  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌──────────┐│
+│  │  画图工具│  │  计算器  │  │ PowerShe │  │  文件管理│  │  注册表  ││
+│  │  Paint   │  │Calculator│  │   ll     │  │ Explorer │  │  Editor  ││
+│  └────┬─────┘  └────┬─────┘  └────┬─────┘  └────┬─────┘  └────┬─────┘│
+└───────┼─────────────┼─────────────┼─────────────┼─────────────┼───────┘
+        │             │             │             │             │
+        └─────────────┴─────────────┴─────────────┴─────────────┘
+                               ▼
+┌─────────────────────────────────────────────────────────────────────────┐
+│                        Win32 API 层 (Windows API)                       │
+│  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌──────────┐│
+│  │   GDI+   │  │  USER32  │  │  KERNEL32│  │  ADVAPI32│  │  SHELL32 ││
+│  │(图形接口)│  │ (窗口UI) │  │(内核服务)│  │(注册表等)│  │(外壳API) ││
+│  └────┬─────┘  └────┬─────┘  └────┬─────┘  └────┬─────┘  └────┬─────┘│
+└───────┼─────────────┼─────────────┼─────────────┼─────────────┼───────┘
+        └─────────────┴─────────────┴─────────────┴─────────────┘
+                               ▼
+┌─────────────────────────────────────────────────────────────────────────┐
+│                      内核层 (Kernel Space)                              │
+│  ┌───────────────────────────────────────────────────────────────────┐ │
+│  │               Windows NT Kernel (ntoskrnl.exe)                    │ │
+│  │  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌──────────┐         │ │
+│  │  │  进程管理│  │  内存管理│  │  I/O管理 │  │  安全子系│         │ │
+│  │  │ Process  │  │  Memory  │  │   I/O    │  │ Security │         │ │
+│  │  │  Mgr     │  │   Mgr    │  │  Manager │  │  Manager │         │ │
+│  │  └──────────┘  └──────────┘  └──────────┘  └──────────┘         │ │
+│  └───────────────────────────────────────────────────────────────────┘ │
+│  ┌───────────────────────────────────────────────────────────────────┐ │
+│  │        JBT-RAMOS 优化层 (核心竞争力所在！)                        │ │
+│  │  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐           │ │
+│  │  │  内存压缩引擎│  │  零拷贝I/O   │  │  预读优化器  │           │ │
+│  │  │ Memory Comp  │  │ Zero-Copy IO │  │  Prefetcher  │           │ │
+│  │  │   LZ4+LZMA2  │  │  DMA Direct  │  │  Predict++   │           │ │
+│  │  └──────────────┘  └──────────────┘  └──────────────┘           │ │
+│  │  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐           │ │
+│  │  │  内存去重    │  │  缓存优化器  │  │  突发加速器  │           │ │
+│  │  │ Deduplication│  │ Cache Tuner  │  │ Burst Accel  │           │ │
+│  │  └──────────────┘  └──────────────┘  └──────────────┘           │ │
+│  └───────────────────────────────────────────────────────────────────┘ │
+└─────────────────────────────────────────────────────────────────────────┘
+                               ▼
+┌─────────────────────────────────────────────────────────────────────────┐
+│                        硬件抽象层 (HAL)                                 │
+│  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌──────────┐│
+│  │  ACPI驱动│  │  PCI总线 │  │  USB控制器│  │  存储控制│  │  网卡驱动││
+│  │  Driver  │  │   Bus    │  │  xHCI    │  │  NVMe/AHCI│  │  Network ││
+│  └────┬─────┘  └────┬─────┘  └────┬─────┘  └────┬─────┘  └────┬─────┘│
+└───────┼─────────────┼─────────────┼─────────────┼─────────────┼───────┘
+        └─────────────┴─────────────┴─────────────┴─────────────┘
+                               ▼
+┌─────────────────────────────────────────────────────────────────────────┐
+│                        硬件层 (Hardware)                                │
+│  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌──────────┐│
+│  │   CPU    │  │   RAM    │  │   DISK   │  │   GPU    │  │   NIC    ││
+│  │  Intel/  │  │  DDR4/   │  │  NVMe/   │  │  NVIDIA/ │  │  Ethernet││
+│  │   AMD    │  │   DDR5   │  │   SATA   │  │   AMD    │  │   WiFi   ││
+│  └──────────┘  └──────────┘  └──────────┘  └──────────┘  └──────────┘│
+└─────────────────────────────────────────────────────────────────────────┘
+
+                        ┌────────────────────┐
+                        │  ☀️ 最终目标：     │
+                        │  登上太阳！        │
+                        └────────────────────┘
+                </pre>
+
+                <div class="arch-highlights">
+                    <div class="highlight-box">
+                        <h4>🔑 核心技术突破</h4>
+                        <ul>
+                            <li><strong>内存压缩引擎</strong>：LZ4+LZMA2双层压缩，压缩率达3.2:1</li>
+                            <li><strong>零拷贝I/O</strong>：DMA直接传输，无需CPU介入</li>
+                            <li><strong>智能预读</strong>：AI预测下一步操作，提前加载</li>
+                            <li><strong>内存去重</strong>：自动识别重复数据，节省30%内存</li>
+                            <li><strong>缓存优化</strong>：L1/L2/L3缓存命中率提升至95%+</li>
+                            <li><strong>突发加速</strong>：关键操作自动超频，性能翻倍</li>
+                        </ul>
+                    </div>
+
+                    <div class="highlight-box">
+                        <h4>⚡ 性能优化策略</h4>
+                        <ul>
+                            <li><strong>全内存运行</strong>：系统完全加载到RAM，无硬盘I/O瓶颈</li>
+                            <li><strong>延迟加载</strong>：只加载必需组件，其余按需加载</li>
+                            <li><strong>并行初始化</strong>：多核心同时初始化，启动速度翻倍</li>
+                            <li><strong>静态链接</strong>：减少DLL加载时间</li>
+                            <li><strong>指令集优化</strong>：针对AVX2/AVX-512优化</li>
+                            <li><strong>关键路径优化</strong>：启动流程精简到极致</li>
+                        </ul>
+                    </div>
+
+                    <div class="highlight-box">
+                        <h4>🛡️ 安全防护机制</h4>
+                        <ul>
+                            <li><strong>重启还原</strong>：所有修改不保存，重启恢复初始状态</li>
+                            <li><strong>只读文件系统</strong>：系统文件无法被修改</li>
+                            <li><strong>内存隔离</strong>：用户空间与内核空间严格隔离</li>
+                            <li><strong>DEP/ASLR</strong>：数据执行保护+地址随机化</li>
+                            <li><strong>Secure Boot</strong>：支持安全启动</li>
+                            <li><strong>零持久化</strong>：恶意软件无法驻留</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ASCII艺术画廊 -->
+    <section class="ascii-gallery">
+        <div class="container">
+            <h2 class="section-title">
+                🎨 ASCII艺术画廊
+                <span class="subtitle">用字符也能画出太阳！</span>
+            </h2>
+
+            <div class="ascii-grid">
+                <div class="ascii-box">
+                    <pre class="ascii-art-sun">
+                   \  |  /
+                    \ | /
+                  -- ☀️ --
+                    / | \
+                   /  |  \
+                   
+            🚀 JBT-RAMOS 🚀
+           飞向太阳中...
+                    </pre>
+                </div>
+
+                <div class="ascii-box">
+                    <pre class="ascii-art-rocket">
+           /\
+          /  \
+         /____\
+        |      |
+        | JBT  |
+        |RAMOS |
+        |______|
+       /|      |\
+      / |______| \
+     /  |  ||  |  \
+    /   |  ||  |   \
+   |    |  ||  |    |
+   |    |__||__|    |
+    \   |  ||  |   /
+     \  |  ||  |  /
+      \ |__||__| /
+       \   ||   /
+        \  ||  /
+         \ || /
+          \||/
+           \/
+        🔥🔥🔥
+                    </pre>
+                </div>
+
+                <div class="ascii-box">
+                    <pre class="ascii-art-pc">
+     ┌─────────────┐
+     │ ░░░░░░░░░░░ │  ← JBT-RAMOS运行中
+     │ ░░░░░░░░░░░ │
+     │ █████████░░ │  ← 光速加载...
+     │ ░░░░░░░░░░░ │
+     └─────────────┘
+     ┌─────────────┐
+     │▓▓▓▓▓▓▓▓▓▓▓▓▓│
+     │▓▓ 步步高 ▓▓▓│  ← JBT最爱
+     │▓▓▓▓▓▓▓▓▓▓▓▓▓│
+     └─────────────┘
+                    </pre>
+                </div>
+
+                <div class="ascii-box">
+                    <pre class="ascii-art-stats">
+╔═══════════════════════════╗
+║   JBT-RAMOS 实时状态      ║
+╠═══════════════════════════╣
+║ CPU:  [████░░░░░░] 40%   ║
+║ RAM:  [█████░░░░░] 50%   ║
+║ DISK: [▓▓▓▓▓▓▓▓▓▓] ∞     ║
+║ NET:  [██████████] 1Gbps ║
+╠═══════════════════════════╣
+║ 速度: ⚡ 光速模式         ║
+║ 状态: ✅ 完美运行         ║
+║ 目标: ☀️ 太阳 (99%)     ║
+╚═══════════════════════════╝
+                    </pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+(继续下一部分...)
+                
+    <!-- 功能特性详解 (原有内容扩展) -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">
+                🌟 超越想象的超能力
+                <span class="subtitle">不是吹，是真的能飞！每一项都是技术突破！</span>
+            </h2>
+            
+            <div class="features-grid">
+                <div class="feature-card shine">
+                    <div class="feature-icon">⚡</div>
+                    <h3>闪电启动 - 3秒进系统</h3>
+                    <p>别人的PE还在读取硬盘？JBT-RAMOS已经启动完毕开始工作了！<strong>全内存运行</strong>，利用DDR4内存50GB/s的恐怖速度，秒杀所有传统PE！</p>
+                    <div class="tech-details">
+                        <strong>技术实现：</strong>
+                        <ul>
+                            <li>Boot Loader直接加载到RAM</li>
+                            <li>并行初始化所有子系统</li>
+                            <li>延迟加载非关键组件</li>
+                            <li>零硬盘I/O等待</li>
+                        </ul>
+                    </div>
+                    <div class="feature-badge">快到飞起</div>
+                </div>
+
+                <div class="feature-card shine">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>病毒？不存在的！</h3>
+                    <p>重启即还原！病毒想感染？门都没有！内存中运行的系统，<strong>病毒无法下手</strong>，永远保持纯净！即使中了勒索病毒，重启就恢复！</p>
+                    <div class="tech-details">
+                        <strong>安全机制：</strong>
+                        <ul>
+                            <li>内存中运行，无持久化</li>
+                            <li>只读文件系统</li>
+                            <li>重启自动还原</li>
+                            <li>零感染风险</li>
+                        </ul>
+                    </div>
+                    <div class="feature-badge">坚不可摧</div>
+                </div>
+
+                <div class="feature-card shine">
+                    <div class="feature-icon">🎯</div>
+                    <h3>体积小到逆天</h3>
+                    <p>ISO镜像<strong>仅953MB</strong>！开机内存占用仅<strong>1.9GB</strong>！这是什么魔法？这是JBT-RAMOS的黑科技 - LZ4+LZMA2双层压缩！</p>
+                    <div class="tech-details">
+                        <strong>压缩技术：</strong>
+                        <ul>
+                            <li>LZ4实时解压（速度快）</li>
+                            <li>LZMA2深度压缩（体积小）</li>
+                            <li>智能分层压缩</li>
+                            <li>3.2:1压缩率</li>
+                        </ul>
+                    </div>
+                    <div class="feature-badge">极致精简</div>
+                </div>
+
+                <div class="feature-card shine">
+                    <div class="feature-icon">💎</div>
+                    <h3>Windows 11 最新内核</h3>
+                    <p>最新的<strong>Windows 11 Build 22635.2419</strong>内核，兼容性爆表！支持最新硬件，完美支持NVMe SSD，触屏完美支持！</p>
+                    <div class="tech-details">
+                        <strong>内核优势：</strong>
+                        <ul>
+                            <li>最新驱动支持</li>
+                            <li>NVMe原生支持</li>
+                            <li>USB 3.2全速</li>
+                            <li>触屏完美体验</li>
+                        </ul>
+                    </div>
+                    <div class="feature-badge">最新技术</div>
+                </div>
+
+                <div class="feature-card shine">
+                    <div class="feature-icon">🎨</div>
+                    <h3>功能全到爆炸</h3>
+                    <p>画图、截图、计算器、PowerShell、.NET框架、媒体播放器...该有的都有！<strong>系统维护</strong>，<strong>数据恢复</strong>，轻松搞定！</p>
+                    <div class="tech-details">
+                        <strong>内置工具：</strong>
+                        <ul>
+                            <li>Win10原版画图</li>
+                            <li>科学计算器</li>
+                            <li>PowerShell 5.1</li>
+                            <li>DiskGenius专业版</li>
+                        </ul>
+                    </div>
+                    <div class="feature-badge">全能战士</div>
+                </div>
+
+                <div class="feature-card shine">
+                    <div class="feature-icon">🆓</div>
+                    <h3>完全免费 - 永久免费！</h3>
+                    <p>对！你没看错！<strong>永久免费</strong>，<strong>无广告</strong>，<strong>无捆绑</strong>，<strong>无全家桶</strong>！这么好的东西，不要钱！开源精神万岁！</p>
+                    <div class="tech-details">
+                        <strong>免费承诺：</strong>
+                        <ul>
+                            <li>永久免费下载</li>
+                            <li>无广告弹窗</li>
+                            <li>无软件捆绑</li>
+                            <li>开源社区驱动</li>
+                        </ul>
+                    </div>
+                    <div class="feature-badge glow">免费到底</div>
+                </div>
+
+                <div class="feature-card shine">
+                    <div class="feature-icon">🔧</div>
+                    <h3>系统维护神器</h3>
+                    <p>分区管理、数据恢复、密码重置、引导修复...专业维护工具一应俱全！维修电脑的必备工具！</p>
+                    <div class="tech-details">
+                        <strong>维护工具：</strong>
+                        <ul>
+                            <li>DiskGenius分区工具</li>
+                            <li>密码重置工具</li>
+                            <li>引导修复工具</li>
+                            <li>数据恢复工具</li>
+                        </ul>
+                    </div>
+                    <div class="feature-badge">专业级</div>
+                </div>
+
+                <div class="feature-card shine">
+                    <div class="feature-icon">📱</div>
+                    <h3>触屏完美支持</h3>
+                    <p>在Surface Pro 1上亲测完美！触屏、手势、多点触控全支持！平板电脑用户的福音！</p>
+                    <div class="tech-details">
+                        <strong>触屏特性：</strong>
+                        <ul>
+                            <li>多点触控</li>
+                            <li>手势识别</li>
+                            <li>压感支持</li>
+                            <li>触控板优化</li>
+                        </ul>
+                    </div>
+                    <div class="feature-badge">触控优化</div>
+                </div>
+
+                <div class="feature-card shine">
+                    <div class="feature-icon">🌐</div>
+                    <h3>网络功能完整</h3>
+                    <p>有线、无线、蓝牙全支持！驱动库覆盖99%主流网卡！联网下载、远程维护都不是问题！</p>
+                    <div class="tech-details">
+                        <strong>网络支持：</strong>
+                        <ul>
+                            <li>以太网卡驱动</li>
+                            <li>WiFi 6支持</li>
+                            <li>蓝牙5.0</li>
+                            <li>网络诊断工具</li>
+                        </ul>
+                    </div>
+                    <div class="feature-badge">全网通</div>
+                </div>
+
+                <div class="feature-card shine">
+                    <div class="feature-icon">💿</div>
+                    <h3>多种启动方式</h3>
+                    <p>U盘、光盘、硬盘、网络启动...想怎么启动就怎么启动！UEFI和Legacy BIOS双模式支持！</p>
+                    <div class="tech-details">
+                        <strong>启动方式：</strong>
+                        <ul>
+                            <li>USB启动（推荐）</li>
+                            <li>光盘启动</li>
+                            <li>硬盘启动</li>
+                            <li>PXE网络启动</li>
+                        </ul>
+                    </div>
+                    <div class="feature-badge">灵活启动</div>
+                </div>
+
+                <div class="feature-card shine">
+                    <div class="feature-icon">🎮</div>
+                    <h3>甚至能玩游戏！</h3>
+                    <p>虽然是PE系统，但性能强大到可以运行轻量级游戏！扫雷、纸牌当然不在话下，甚至一些小游戏也能跑！</p>
+                    <div class="tech-details">
+                        <strong>娱乐功能：</strong>
+                        <ul>
+                            <li>Windows经典游戏</li>
+                            <li>媒体播放器</li>
+                            <li>图片查看器</li>
+                            <li>轻量级应用</li>
+                        </ul>
+                    </div>
+                    <div class="feature-badge">娱乐性</div>
+                </div>
+
+                <div class="feature-card shine">
+                    <div class="feature-icon">📊</div>
+                    <h3>实时性能监控</h3>
+                    <p>CPU、内存、硬盘、网络实时监控！了解系统状态，优化使用体验！任务管理器功能完整！</p>
+                    <div class="tech-details">
+                        <strong>监控工具：</strong>
+                        <ul>
+                            <li>任务管理器</li>
+                            <li>性能监视器</li>
+                            <li>资源监视器</li>
+                            <li>事件查看器</li>
+                        </ul>
+                    </div>
+                    <div class="feature-badge">监控全面</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 用户评价 -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">
+                💬 用户真实评价
+                <span class="subtitle">50000+用户的共同选择！</span>
+            </h2>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="user-avatar">👨‍💻</div>
+                        <div class="user-info">
+                            <div class="user-name">IT维修老王</div>
+                            <div class="user-title">电脑维修店店主</div>
+                        </div>
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    <div class="testimonial-content">
+                        "用了JBT-RAMOS后，我的维修效率提升了300%！启动快，工具全，从来不崩溃！现在是我维修电脑的第一选择，强烈推荐给所有搞维修的朋友！"
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="user-avatar">🎓</div>
+                        <div class="user-info">
+                            <div class="user-name">大学生小明</div>
+                            <div class="user-title">计算机专业学生</div>
+                        </div>
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    <div class="testimonial-content">
+                        "学校机房的电脑经常出问题，有了JBT-RAMOS，我成了同学们眼中的大神！U盘随身带，哪里有问题帮哪里，太方便了！"
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="user-avatar">👨‍💼</div>
+                        <div class="user-info">
+                            <div class="user-name">企业IT张工</div>
+                            <div class="user-title">公司IT管理员</div>
+                        </div>
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    <div class="testimonial-content">
+                        "公司100多台电脑的维护工作，有了JBT-RAMOS轻松多了！网络启动功能让我可以批量部署，效率翻倍！而且完全免费，帮公司省了不少预算！"
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="user-avatar">🏠</div>
+                        <div class="user-info">
+                            <div class="user-name">家庭用户李姐</div>
+                            <div class="user-title">普通用户</div>
+                        </div>
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    <div class="testimonial-content">
+                        "我对电脑不太懂，但JBT-RAMOS真的很好用！界面简单，工具齐全，上次电脑中病毒用它救回了所有重要文件！感谢JBT大神！"
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="user-avatar">🎮</div>
+                        <div class="user-info">
+                            <div class="user-name">游戏玩家小刘</div>
+                            <div class="user-title">硬件发烧友</div>
+                        </div>
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    <div class="testimonial-content">
+                        "测试了所有主流PE，JBT-RAMOS的性能是真的强！内存占用低，速度快如闪电，NVMe SSD识别完美！技术大佬必备！"
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="user-avatar">🔧</div>
+                        <div class="user-info">
+                            <div class="user-name">数据恢复专家</div>
+                            <div class="user-title">专业数据恢复</div>
+                        </div>
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    <div class="testimonial-content">
+                        "从业10年，用过无数PE工具，JBT-RAMOS是我见过最专业的！DiskGenius集成得很完美，数据恢复成功率更高了！"
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="user-avatar">🏫</div>
+                        <div class="user-info">
+                            <div class="user-name">学校老师</div>
+                            <div class="user-title">计算机教师</div>
+                        </div>
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    <div class="testimonial-content">
+                        "教学中经常需要演示系统维护，JBT-RAMOS启动快，界面清爽，学生们都很喜欢！而且免费，推广起来没有负担！"
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="user-avatar">💻</div>
+                        <div class="user-info">
+                            <div class="user-name">程序员阿伟</div>
+                            <div class="user-title">Full Stack Developer</div>
+                        </div>
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    <div class="testimonial-content">
+                        "作为程序员，我看了一下JBT-RAMOS的技术实现，真的很厉害！汇编代码优化、内存管理、I/O优化都做得很专业！佩服！"
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-stats">
+                <div class="stat-box">
+                    <div class="stat-number">99.9%</div>
+                    <div class="stat-label">用户满意度</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">50000+</div>
+                    <div class="stat-label">活跃用户</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">1000000+</div>
+                    <div class="stat-label">累计下载</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">0</div>
+                    <div class="stat-label">负面评价</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 版本历史 -->
+    <section id="versions" class="versions-section">
+        <div class="container">
+            <h2 class="section-title">
+                📜 版本演进历史
+                <span class="subtitle">每一次更新都是一次飞跃！</span>
+            </h2>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2025-07-04</div>
+                    <div class="timeline-content">
+                        <h3>v2.1.7-Gen2 🔥 最新版</h3>
+                        <ul>
+                            <li>✅ 修复Windows Media Player播放问题</li>
+                            <li>✅ 继续精简，ISO仅953MB</li>
+                            <li>✅ 内存占用优化至1.9GB</li>
+                            <li>✅ 性能提升15%</li>
+                            <li>✅ 稳定性大幅提升</li>
+                        </ul>
+                        <a href="https://jbt-ramos.github.io/2025/07/04/JBT-RAMOSv2.1.7-Gen2/" class="version-link">查看详情 →</a>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2025-02-07</div>
+                    <div class="timeline-content">
+                        <h3>v2.3.1</h3>
+                        <ul>
+                            <li>✅ 画图、截图、计算器更换为Win10版本</li>
+                            <li>✅ 修复笔记本/平板开机弹窗报错</li>
+                            <li>✅ Surface Pro 1触屏完美支持</li>
+                            <li>✅ 驱动兼容性提升</li>
+                        </ul>
+                        <a href="https://jbt-ramos.github.io/2025/02/07/JBT-RAMOSv2.3.1/" class="version-link">查看详情 →</a>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2025-01-27</div>
+                    <div class="timeline-content">
+                        <h3>v2.1.5</h3>
+                        <ul>
+                            <li>✅ 添加精简版.NET Framework</li>
+                            <li>✅ 添加Windows PowerShell</li>
+                            <li>✅ ISO精简至1GB以下</li>
+                            <li>✅ 优化7-Zip注册表</li>
+                            <li>✅ 应用支持大幅增加</li>
+                        </ul>
+                        <a href="https://jbt-ramos.github.io/2025/01/27/JBT-RAMOSv2.1.5/" class="version-link">查看详情 →</a>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2024-08-07</div>
+                    <div class="timeline-content">
+                        <h3>v2.1.1</h3>
+                        <ul>
+                            <li>✅ 首次发布精简版.NET</li>
+                            <li>✅ 内存占用降至1.9GB</li>
+                            <li>✅ ISO体积优化</li>
+                            <li>✅ 基础功能稳定</li>
+                        </ul>
+                        <a href="https://jbt-ramos.github.io/2024/08/07/JBT-RAMOSv2.1.1/" class="version-link">查看详情 →</a>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2024-更早</div>
+                    <div class="timeline-content">
+                        <h3>v2.0及更早版本</h3>
+                        <ul>
+                            <li>✅ JBT-RAMOS项目启动</li>
+                            <li>✅ 基础架构搭建</li>
+                            <li>✅ RAMOS技术研究</li>
+                            <li>✅ 社区建立</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="roadmap">
+                <h3>🚀 未来计划</h3>
+                <div class="roadmap-grid">
+                    <div class="roadmap-card">
+                        <div class="roadmap-icon">🎯</div>
+                        <h4>短期目标</h4>
+                        <ul>
+                            <li>进一步优化内存占用</li>
+                            <li>支持更多硬件</li>
+                            <li>添加更多工具</li>
+                            <li>提升启动速度</li>
+                        </ul>
+                    </div>
+                    <div class="roadmap-card">
+                        <div class="roadmap-icon">🌟</div>
+                        <h4>中期目标</h4>
+                        <ul>
+                            <li>开发图形化配置工具</li>
+                            <li>支持在线更新</li>
+                            <li>云端备份功能</li>
+                            <li>多语言支持</li>
+                        </ul>
+                    </div>
+                    <div class="roadmap-card">
+                        <div class="roadmap-icon">☀️</div>
+                        <h4>终极目标</h4>
+                        <ul>
+                            <li>登上太阳！</li>
+                            <li>成为最强PE</li>
+                            <li>全球推广</li>
+                            <li>开源社区壮大</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 登陆太阳实录 (原有内容保留) -->
+    <section id="sun-journey" class="sun-journey">
+        <div class="container">
+            <h2 class="section-title">
+                ☀️ 历史性时刻：JBT成功登陆太阳！
+                <span class="subtitle">这不是科幻，这是现实！用JBT-RAMOS，你也能登上太阳！</span>
+            </h2>
+
+            <div class="journey-timeline">
+                <!-- 准备阶段 -->
+                <div class="timeline-item">
+                    <div class="timeline-badge">📢</div>
+                    <div class="timeline-content">
+                        <h3>出发前的宣言</h3>
+                        <p class="timeline-description">
+                            在 JBT-RAMOS 交流群（21）中，<strong>JBT 本人</strong>（项目作者）发出了震撼声明：
+                        </p>
+                        <div class="evidence-box">
+                            <img src="qq-chat.jpg" alt="QQ群聊天记录" class="evidence-image">
+                            <p class="evidence-caption">
+                                💬 <strong>"主播马上要登陆太阳了"</strong><br>
+                                —— JBT 在交流群的历史性发言
+                            </p>
+                        </div>
+                        <div class="fun-fact">
+                            <strong>🎯 传说：</strong> JBT 最爱的装备是<strong>步步高</strong>，这次登陆太阳也随身携带！
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 登陆成功 -->
+                <div class="timeline-item highlight">
+                    <div class="timeline-badge">🏆</div>
+                    <div class="timeline-content">
+                        <h3>登陆成功！人类新纪元！</h3>
+                        <p class="timeline-description">
+                            就在所有人都以为这只是玩笑时，<strong>JBT 真的做到了</strong>！凭借 JBT-RAMOS 的超强性能，成功登陆太阳表面！
+                        </p>
+                        <div class="hero-landing">
+                            <img src="jbt-sun.jpg" alt="JBT登陆太阳" class="hero-image">
+                            <div class="landing-description">
+                                <h4>🌟 历史性的一刻</h4>
+                                <ul class="landing-details">
+                                    <li>✅ 使用设备：搭载 JBT-RAMOS 的笔记本电脑</li>
+                                    <li>✅ 必备装备：步步高（JBT最爱）</li>
+                                    <li>✅ 地点：太阳表面（温度：约5500℃）</li>
+                                    <li>✅ 系统状态：完美运行，0崩溃</li>
+                                    <li>✅ 心情：太好用了！🏆</li>
+                                </ul>
+                                <div class="success-badge">
+                                    <span class="badge-icon">🎉</span>
+                                    <span class="badge-text">JBTRAMOS太好用了！</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 实拍视频 -->
+                <div class="timeline-item">
+                    <div class="timeline-badge">📹</div>
+                    <div class="timeline-content">
+                        <h3>珍贵实拍：太阳表面第一视角</h3>
+                        <p class="timeline-description">
+                            这是人类历史上第一次拍摄到的<strong>太阳表面实拍画面</strong>！JBT 用着 JBT-RAMOS，带着心爱的步步高，勇敢地踏上了太阳！
+                        </p>
+                        <div class="video-gallery">
+                            <div class="video-container">
+                                <video controls poster="jbt-sun.jpg" class="journey-video">
+                                    <source src="jbt-video1.mp4" type="video/mp4">
+                                    您的浏览器不支持视频播放。
+                                </video>
+                                <p class="video-caption">📹 登陆太阳 - 第一部分</p>
+                            </div>
+                            <div class="video-container">
+                                <video controls poster="jbt-sun.jpg" class="journey-video">
+                                    <source src="jbt-video2.mp4" type="video/mp4">
+                                    您的浏览器不支持视频播放。
+                                </video>
+                                <p class="video-caption">📹 登陆太阳 - 第二部分</p>
+                            </div>
+                        </div>
+                        <div class="warning-box">
+                            <p>
+                                ⚠️ <strong>安全提示：</strong> 以上视频为娱乐创作，请勿模仿。太阳表面温度极高，普通设备无法承受。
+                                但使用 JBT-RAMOS 后，一切皆有可能！😄
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 行动号召 -->
+            <div class="journey-cta">
+                <h3>🚀 你也想登上太阳吗？</h3>
+                <p>加入 JBT-RAMOS 社区，下载这个神奇的系统，开启你的太阳之旅！</p>
+                <div class="cta-buttons">
+                    <a href="#download" class="btn btn-primary">
+                        立即下载 JBT-RAMOS
+                    </a>
+                    <a href="https://jbt-ramos.github.io/" target="_blank" class="btn btn-secondary">
+                        访问官方网站
+                    </a>
+                </div>
+                <p class="cta-note">
+                    💬 加入 QQ 交流群：<strong>180417802</strong><br>
+                    和 JBT 本人一起讨论如何登陆太阳！
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ常见问题 -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">
+                ❓ 常见问题解答 (FAQ)
+                <span class="subtitle">99%的问题都在这里！</span>
+            </h2>
+
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">🤔 什么是RAMOS？为什么这么快？</div>
+                    <div class="faq-answer">
+                        RAMOS = RAM Operating System（内存操作系统）。它把整个系统加载到内存中运行，不依赖硬盘。
+                        内存速度是硬盘的几十倍，所以快到飞起！DDR4内存读写速度可达50GB/s，而顶级SSD也就7GB/s。
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">💾 需要多少内存？</div>
+                    <div class="faq-answer">
+                        最低2GB，推荐4GB以上。JBT-RAMOS运行时占用约1.9GB内存，剩余内存可以用来安装软件、
+                        存储临时文件。8GB或16GB内存体验更佳！
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">🔐 数据会丢失吗？</div>
+                    <div class="faq-answer">
+                        重启后内存中的数据会丢失，这是RAMOS的特性。但这也是它的优势：病毒无法驻留！
+                        如果需要保存数据，可以复制到硬盘、U盘或网络存储。
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">💻 支持哪些电脑？</div>
+                    <div class="faq-answer">
+                        几乎所有x86-64架构的电脑！从老旧的Core 2 Duo到最新的12代/13代Intel和Ryzen 7000都支持。
+                        UEFI和Legacy BIOS双模式，台式机、笔记本、平板都能用！
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">📱 支持触屏吗？</div>
+                    <div class="faq-answer">
+                        完美支持！在Surface Pro 1上亲测可用，触屏、手势、多点触控全支持。
+                        如果你的设备有触屏功能，在JBT-RAMOS中同样可以使用。
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">🌐 可以联网吗？</div>
+                    <div class="faq-answer">
+                        当然可以！集成了99%主流网卡驱动，有线、无线都支持。可以上网下载文件、
+                        远程协助、在线求助，网络功能完整！
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">🛠️ 能安装软件吗？</div>
+                    <div class="faq-answer">
+                        可以！支持绿色软件和部分需要安装的软件。但重启后会丢失，
+                        建议使用内置工具或便携版软件。适合临时使用场景。
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">🆓 真的完全免费吗？</div>
+                    <div class="faq-answer">
+                        是的！永久免费，无广告，无捆绑，无全家桶！JBT大神坚持开源精神，
+                        不收一分钱。请放心使用，并推荐给更多人！
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">🔧 如何制作启动U盘？</div>
+                    <div class="faq-answer">
+                        使用Rufus、Ventoy或其他U盘启动盘制作工具，选择下载的ISO镜像，
+                        写入U盘即可。详细教程请查看官网或B站视频。
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">⚠️ 会损坏硬盘吗？</div>
+                    <div class="faq-answer">
+                        不会！JBT-RAMOS是只读系统，只会读取硬盘数据，不会写入（除非你手动操作）。
+                        比普通系统更安全，可以放心使用！
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">🎮 能玩游戏吗？</div>
+                    <div class="faq-answer">
+                        轻量级游戏可以！扫雷、纸牌、小游戏都没问题。大型游戏不推荐，
+                        毕竟这是PE系统，主要用于系统维护，不是游戏平台。
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">📞 遇到问题怎么办？</div>
+                    <div class="faq-answer">
+                        加入QQ交流群：180417802，群里有JBT本人和众多热心用户，
+                        随时帮你解答问题！也可以去B站留言或访问官网。
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 下载区域 -->
+    <section id="download" class="download">
+        <div class="container">
+            <div class="download-box">
+                <h2>🎉 准备好登上太阳了吗？</h2>
+                <p class="download-subtitle">完全免费，无需注册，立即体验光速PE！</p>
+                
+                <div class="download-buttons">
+                    <a href="https://pan.huang1111.cn/s/y5GQ4i6" target="_blank" class="btn btn-download">
+                        <span class="btn-icon">📥</span>
+                        <span class="btn-text">
+                            <strong>官方下载 #1</strong>
+                            <small>黄榴莲云盘</small>
+                        </span>
+                    </a>
+                    <a href="https://www.123912.com/s/ZBeejv-0Aedd" target="_blank" class="btn btn-download">
+                        <span class="btn-icon">📥</span>
+                        <span class="btn-text">
+                            <strong>官方下载 #2</strong>
+                            <small>123云盘</small>
+                        </span>
+                    </a>
+                </div>
+
+                <div class="download-info">
+                    <div class="info-item">
+                        <strong>最新版本：</strong>
+                        <span>v2.1.7-Gen2 (2025-07-04)</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>文件大小：</strong>
+                        <span>953 MB</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>文件格式：</strong>
+                        <span>ISO 镜像文件</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>系统要求：</strong>
+                        <span>4GB+ 内存推荐</span>
+                    </div>
+                </div>
+
+                <div class="download-features">
+                    <div class="feature-tag">✅ 完全免费</div>
+                    <div class="feature-tag">✅ 开源项目</div>
+                    <div class="feature-tag">✅ 持续更新</div>
+                    <div class="feature-tag">✅ 纯净无广告</div>
+                    <div class="feature-tag">✅ 无需注册</div>
+                    <div class="feature-tag">✅ 永久免费</div>
+                </div>
+
+                <div class="download-links">
+                    <h3>🔗 相关链接</h3>
+                    <div class="links-grid">
+                        <a href="https://jbt-ramos.github.io/" target="_blank" class="link-btn">
+                            🌐 官方网站
+                        </a>
+                        <a href="https://www.bilibili.com/video/BV1rrgXzhEoV" target="_blank" class="link-btn">
+                            📺 B站视频教程
+                        </a>
+                        <a href="https://github.com/jbt-ramos" target="_blank" class="link-btn">
+                            💻 GitHub项目
+                        </a>
+                        <a href="javascript:void(0)" class="link-btn" onclick="alert('QQ群号：180417802')">
+                            💬 QQ交流群
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 社区支持 -->
+    <section class="community">
+        <div class="container">
+            <h2 class="section-title">
+                👥 加入JBT-RAMOS社区
+                <span class="subtitle">和万千用户一起飞向太阳！</span>
+            </h2>
+
+            <div class="community-links">
+                <a href="https://jbt-ramos.github.io/" target="_blank" class="community-card">
+                    <div class="community-icon">🌐</div>
+                    <h3>官方网站</h3>
+                    <p>获取最新版本和更新日志</p>
+                    <div class="community-stats">访问量：100万+</div>
+                </a>
+
+                <a href="https://www.bilibili.com/video/BV1rrgXzhEoV" target="_blank" class="community-card">
+                    <div class="community-icon">📺</div>
+                    <h3>B站视频</h3>
+                    <p>观看详细教程和演示</p>
+                    <div class="community-stats">播放量：10万+</div>
+                </a>
+
+                <a href="https://github.com/jbt-ramos" target="_blank" class="community-card">
+                    <div class="community-icon">💻</div>
+                    <h3>GitHub</h3>
+                    <p>开源项目，欢迎贡献</p>
+                    <div class="community-stats">Star：1000+</div>
+                </a>
+
+                <div class="community-card" onclick="alert('QQ群号：180417802\n快来加入我们！')">
+                    <div class="community-icon">💬</div>
+                    <h3>QQ交流群</h3>
+                    <p>群号：180417802</p>
+                    <div class="community-stats">成员：5000+</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>⚡ JBT-RAMOS</h3>
+                    <p>突破极限的超级PE系统</p>
+                    <p class="footer-slogan">🚀 不是在飞，就是在飞往太阳的路上！</p>
+                    <div class="footer-badges">
+                        <span class="badge">开源</span>
+                        <span class="badge">免费</span>
+                        <span class="badge">高性能</span>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>快速链接</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">首页</a></li>
+                        <li><a href="#tech">技术详解</a></li>
+                        <li><a href="#benchmark">性能测试</a></li>
+                        <li><a href="#features">功能特性</a></li>
+                        <li><a href="#sun-journey">登陆太阳</a></li>
+                        <li><a href="#download">立即下载</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>关于项目</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://jbt-ramos.github.io/" target="_blank">官方网站</a></li>
+                        <li><a href="https://github.com/jbt-ramos" target="_blank">GitHub</a></li>
+                        <li><a href="https://www.bilibili.com" target="_blank">B站视频</a></li>
+                        <li><a href="javascript:void(0)" onclick="alert('QQ群：180417802')">加入社区</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>技术规格</h4>
+                    <p>✅ Windows 11 Build 22635.2419</p>
+                    <p>✅ ISO: 953MB | RAM: 1.9GB</p>
+                    <p>✅ 启动: 3秒 | 响应: <5ms</p>
+                    <p>✅ 完全免费 | 永久免费</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>特别提醒</h4>
+                    <p>✅ 完全免费，永久免费</p>
+                    <p>✅ 纯净无广告，无捆绑</p>
+                    <p>✅ 开源项目，安全可靠</p>
+                    <p>✅ 社区驱动，持续更新</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>联系方式</h4>
+                    <p>💬 QQ群：180417802</p>
+                    <p>📺 B站：@JBT-RAMOS</p>
+                    <p>🌐 官网：jbt-ramos.github.io</p>
+                    <p>💻 GitHub：github.com/jbt-ramos</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024-2025 JBT-RAMOS Project. 开源免费项目，禁止用于商业用途。</p>
+                <p class="footer-note">本项目基于 Windows PE 技术，所有 Windows 商标归 Microsoft 所有。</p>
+                <p class="footer-love">Made with ❤️ by JBT and Community Contributors</p>
+                <div class="footer-stats">
+                    <span>👥 50000+ 用户</span>
+                    <span>📥 1000000+ 下载</span>
+                    <span>⭐ 99.9% 满意度</span>
+                    <span>🔥 持续更新中</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 回到顶部按钮 -->
+    <button id="backToTop" class="back-to-top" title="回到顶部">
+        ↑
+    </button>
+
+    <!-- 浮动客服 -->
+    <div class="floating-contact">
+        <div class="contact-button" onclick="alert('QQ群：180417802\n官网：https://jbt-ramos.github.io')">
+            💬
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
